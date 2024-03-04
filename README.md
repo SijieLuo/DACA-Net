@@ -22,7 +22,7 @@ Samples
 </p>
 
 <p align="center">
-  <span>oil</span>&emsp;<span>scratch</span>&emsp;<span>stain</span>
+  <span>oil</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>scratch</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>stain</span>
 </p>
 
 
