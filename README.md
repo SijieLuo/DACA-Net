@@ -17,7 +17,9 @@ Samples
 </p>
 <p float="left">
   <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/91ef6aa7-a645-4562-8274-2ae2c0174657" width="32%" /><br>Oil
+  
   <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/f371add6-8acc-4867-ab6a-af10aaf2bffa" width="32%" /><br>Scratch
+  
   <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/0cfcba51-7b01-4e1a-819e-11bed5b57b81" width="32%" /><br>Stain
 </p>
 
