@@ -1,2 +1,7 @@
 This is the code of Detail aware network with contrast attention
-![image](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/f27af69f-a21c-4c13-8cba-a2be2bd6642d)
+
+**Dataset**
+![Oil_0011](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/b682793c-c5ae-4263-b634-8797280d0238)![Scr_0208](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/cdf4d0c1-ccd5-4d3e-917a-36c63839f0b7)![Sta_0108](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/2feb05b8-ce30-4310-b3ca-b015de173295)
+![image](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/7b00a4d3-8161-4ad9-b85c-add8f37a6f76)![image](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/f371add6-8acc-4867-ab6a-af10aaf2bffa)![image](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/0cfcba51-7b01-4e1a-819e-11bed5b57b81)
+
+
