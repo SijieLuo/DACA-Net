@@ -2,11 +2,9 @@ This is the code of Detail aware network with contrast attention
 
 **Dataset**
 
-Mobile phone screen surface defect segmentation dataset.
+LCD surface defect segmentation dataset.
 
-This dataset contains 3 types of surface defects: Oil, Scratch and Stain. It consists of 1200 images and 400 images for each defects. The defects are made by ourselves. The images are collected by industrial camera and the resolution is 1920×1080.The dataset is built and presented by Jian Zhang, Miaoju Ban (Open Lab on Human Robot Interaction, Peking University).
-
-
+The surface defect dataset included three types of defects: oil, scratches and stains, with 400 images per defect type at a resolution of 1920×1080.The dataset is built and presented by Jian Zhang, Miaoju Ban (Open Lab on Human Robot Interaction, Peking University).To download the dataset, please visit: https://robotics.pkusz.edu.cn/resources/dataset/; the GitHub source is available at https://github.com/jianzhang96/MSD.
 
 Samples
 
@@ -25,6 +23,11 @@ Samples
   <span>oil</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>scratch</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>stain</span>
 </p>
 
+PCB surface defect segmentation dataset.
+
+The PCB defect dataset (\cite{r46}) contained 693 images with six types of defects: missing holes, open circuit, mouse bites, spur, short, and spurious copper. These images were characterized by low contrast and tiny object in various scenarios. The dataset is built and presented by Lihui Dai et al. (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit:https://robotics.pkusz.edu.cn/resources/dataset/
+
+Samples
 
 ![绘图2](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/bfa1176f-084a-4302-aa58-ea99bde3b24d)
 
