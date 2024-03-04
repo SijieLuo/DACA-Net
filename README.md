@@ -16,14 +16,14 @@ Samples
   <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/2feb05b8-ce30-4310-b3ca-b015de173295" width="32%" />
 </p>
 <p float="left">
-  <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/91ef6aa7-a645-4562-8274-2ae2c0174657" width="32%" /><br>Oil
-  
-  <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/f371add6-8acc-4867-ab6a-af10aaf2bffa" width="32%" /><br>Scratch
-  
-  <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/0cfcba51-7b01-4e1a-819e-11bed5b57b81" width="32%" /><br>Stain
+  <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/91ef6aa7-a645-4562-8274-2ae2c0174657" width="32%" />
+  <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/f371add6-8acc-4867-ab6a-af10aaf2bffa" width="32%" />
+  <img src="https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/0cfcba51-7b01-4e1a-819e-11bed5b57b81" width="32%" />
 </p>
 
-
+<p align="center">
+  oil &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scratch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stain
+</p>
 
 ![绘图2](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/bfa1176f-084a-4302-aa58-ea99bde3b24d)
 
