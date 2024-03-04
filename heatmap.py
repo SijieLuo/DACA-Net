@@ -109,7 +109,7 @@ class yolov5_heatmap:
 #exp97-WAIPIN_pram,exp112_yolov5s_waipin_new,exp46-PRAM_LCD,exp63-yolov5s-LCD
 def get_params():
     params = {
-        'weight': 'runs/train/exp97-WAIPIN_pram/weights/best.pt',
+        'weight': '',
         'cfg': 'models/PRAM.yaml',
         'device': 'cuda:0',
         'method': 'XGradCAM',  # GradCAMPlusPlus, GradCAM, XGradCAM
@@ -123,4 +123,4 @@ def get_params():
 
 if __name__ == '__main__':
     model = yolov5_heatmap(**get_params())
-    model(r'E:\Users\Administrator\Desktop\58\train\images\Oil_0174.jpg', 'result') #802,945,Oil_0011,oil0174
+    model('', 'result') #802,945,Oil_0011,oil0174
