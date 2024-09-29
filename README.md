@@ -25,7 +25,7 @@ Samples
 
 **PCB surface defect dataset**
 
-The PCB defect dataset contained 693 images with six types of defects: missing holes, open circuit, mouse bites, spur, short, and spurious copper. These images were characterized by low contrast and tiny object in various scenarios. The dataset is built and presented by Lihui Dai et al. (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit:https://robotics.pkusz.edu.cn/resources/dataset/.
+The PCB defect dataset contained 693 images with six types of defects: missing holes, open circuit, mouse bites, spur, short, and spurious copper. These images were characterized by low contrast and tiny object in various scenarios. The dataset is built and presented by Lihui Dai et al. (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit:
 
 Samples
 
@@ -33,7 +33,12 @@ Samples
 
 
 **LCD light defect dataset**
-The LCD light defect dataset displayed defects on a 7-inch screen with a resolution of 768×1280, encompassing spot, line, and mura defects. The dataset is provided by the data fusion research team at the University of Electronic Science and Technology of China and will be made public after the related research works are published.
+The LCD light defect dataset displayed defects on a 7-inch screen with a resolution of 768×1280, encompassing spot, line, and mura defects. The dataset is provided by the data fusion research team at the University of Electronic Science and Technology of China, To download the dataset, please visit:https://robotics.pkusz.edu.cn/resources/dataset/.
+
+Samples
+
+[绘图2.pdf](https://github.com/user-attachments/files/17178454/2.pdf)
+
 
 
 
