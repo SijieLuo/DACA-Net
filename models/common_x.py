@@ -51,7 +51,6 @@ class BaseConv(nn.Module):
 
 
 class DWConv(nn.Module):
-    """Depthwise Conv + Conv"""
 
     def __init__(self, in_channels, out_channels, ksize, stride=1, act="silu"):
         super().__init__()
@@ -98,7 +97,6 @@ class Bottleneck(nn.Module):
 
 
 class ResLayer(nn.Module):
-    "Residual layer with `in_channels` inputs."
 
     def __init__(self, in_channels: int):
         super().__init__()
@@ -116,7 +114,6 @@ class ResLayer(nn.Module):
 
 
 class SPPBottleneck(nn.Module):
-    """Spatial pyramid pooling layer used in YOLOv3-SPP"""
 
     def __init__(
             self, in_channels, out_channels, kernel_sizes=(5, 9, 13), activation="silu"
