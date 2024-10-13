@@ -1564,7 +1564,6 @@ class DenseBlock(nn.Module):
         return self.cv3(torch.cat((self.layer(self.cv1(x)), self.cv2(x)), dim=1))
         # return torch.cat((self.layer(self.cv1(x)), self.cv2(x)), dim=1)
 
-#并行残差注意力机制PRAM
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -1611,32 +1610,9 @@ class SpatialAttention(nn.Module):
         return self.sigmoid(x)
 
 
-class RPAM(nn.Module):
-    def __init__(self, in_planes, ratio=16, kernel_size=7):
-        super(RPAM, self).__init__()
-        self.ca = ChannelAttention(in_planes, ratio)
-        self.sa = SpatialAttention(kernel_size)
-
-    def forward(self, x):
-        ca_weights = self.ca(x)
-        sa_weights = self.sa(x)
-
-        # Combine channel and spatial attention weights
-        combined_weights = ca_weights * sa_weights
-
-        # Apply attention to the input
-        out = x * combined_weights
-
-        # Skip connection
-        out = out + x
-
-        return out
 
 
 class CBAM(nn.Module):
-    '''CBAM包含CAM通道注意力模块（Channel Attention Module）和SAM空间注意力模块（Spartial Attention Module）两个子模块，
-    分别进行通道和空间上的Attention。这样不只能够节约参数和计算力，并且保证了其能够做为即插即用的模块集成到现有的网络架构中去。
-    '''
 
     def __init__(self, in_channels, out_channels, r=0.5):
         super(CBAM, self).__init__()
@@ -1694,7 +1670,6 @@ class v8_C2fBottleneck(nn.Module):
     def forward(self, x):
         return x + self.cv2(self.cv1(x)) if self.add else self.cv2(self.cv1(x))
 
-#v8的c2f
 class C2f(nn.Module):
     # CSP Bottleneck with 2 convolutions
     def __init__(self, c1, c2, n=1, shortcut=False, g=1, e=0.5):  # ch_in, ch_out, number, shortcut, groups, expansion
@@ -1710,7 +1685,6 @@ class C2f(nn.Module):
         y.extend(m(y[-1]) for m in self.m)
         return self.cv2(torch.cat(y, 1))
 
-#Idetect检测头
 ######################  Idetect  IAuxDetect  ####     start ###############################
 
 class ImplicitA(nn.Module):
@@ -1841,7 +1815,6 @@ class C3CA(C3):
         c_ = int(c2 * e)  # hidden channels
         self.m = nn.Sequential(*(CABottleneck(c_, c_, shortcut) for _ in range(n)))
 
-#se注意力
 class SE(nn.Module):
     def __init__(self, c1, c2, r=16):
         super(SE, self).__init__()
@@ -1862,14 +1835,9 @@ class SE(nn.Module):
         return x * y.expand_as(x)
 
 
-# 结合BiFPN 设置可学习参数 学习不同分支的权重
-# 两个分支add操作
 class BiFPN_Add2(nn.Module):
     def __init__(self, c1, c2):
         super(BiFPN_Add2, self).__init__()
-        # 设置可学习参数 nn.Parameter的作用是：将一个不可训练的类型Tensor转换成可以训练的类型parameter
-        # 并且会向宿主模型注册该参数 成为其一部分 即model.parameters()会包含这个parameter
-        # 从而在参数优化的时候可以自动一起优化
         self.w = nn.Parameter(torch.ones(2, dtype=torch.float32), requires_grad=True)
         self.epsilon = 0.0001
         self.conv = nn.Conv2d(c1, c2, kernel_size=1, stride=1, padding=0)
@@ -1881,7 +1849,6 @@ class BiFPN_Add2(nn.Module):
         return self.conv(self.silu(weight[0] * x[0] + weight[1] * x[1]))
 
 
-# 三个分支add操作
 class BiFPN_Add3(nn.Module):
     def __init__(self, c1, c2):
         super(BiFPN_Add3, self).__init__()
@@ -1896,7 +1863,6 @@ class BiFPN_Add3(nn.Module):
         # Fast normalized fusion
         return self.conv(self.silu(weight[0] * x[0] + weight[1] * x[1] + weight[2] * x[2]))
 
-##res2net
 class Bottle2neck(nn.Module):
     expansion = 1
 
@@ -1988,9 +1954,7 @@ class h_swish(nn.Module):
 class SELayer(nn.Module):
     def __init__(self, channel, reduction=4):
         super(SELayer, self).__init__()
-        # Squeeze操作
         self.avg_pool = nn.AdaptiveAvgPool2d(1)
-        # Excitation操作(FC+ReLU+FC+Sigmoid)
         self.fc = nn.Sequential(
             nn.Linear(channel, channel // reduction),
             nn.ReLU(inplace=True),
@@ -2002,7 +1966,7 @@ class SELayer(nn.Module):
         b, c, _, _ = x.size()
         y = self.avg_pool(x)
         y = y.view(b, c)
-        y = self.fc(y).view(b, c, 1, 1)  # 学习到的每一channel的权重
+        y = self.fc(y).view(b, c, 1, 1) 
         return x * y
 
 
@@ -2036,7 +2000,6 @@ class MobileNet_Block (nn.Module):
 
         self.identity = stride == 1 and inp == oup
 
-        # 输入通道数=扩张通道数 则不进行通道扩张
         if inp == hidden_dim:
             self.conv = nn.Sequential(
                 # dw
@@ -2051,7 +2014,6 @@ class MobileNet_Block (nn.Module):
                 nn.BatchNorm2d(oup),
             )
         else:
-            # 否则 先进行通道扩张
             self.conv = nn.Sequential(
                 # pw
                 nn.Conv2d(inp, hidden_dim, 1, 1, 0, bias=False),
@@ -2076,29 +2038,21 @@ class MobileNet_Block (nn.Module):
         else:
             return y
 
-#bifpn_update
-# 结合BiFPN 设置可学习参数 学习不同分支的权重
-# 两个分支concat操作
 class BiFPN_Concat2(nn.Module):
     def __init__(self, dimension=1):
         super(BiFPN_Concat2, self).__init__()
         self.d = dimension
         self.w = nn.Parameter(torch.ones(2, dtype=torch.float32), requires_grad=True)
         self.epsilon = 0.0001
-        # 设置可学习参数 nn.Parameter的作用是：将一个不可训练的类型Tensor转换成可以训练的类型
-        #parameter
-        # 并且会向宿主模型注册该参数 成为其一部分 即model.parameters()会包含这个parameter
-        # 从而在参数优化的时候可以自动一起优化
 
     def forward(self, x):
         w = self.w
-        weight = w / (torch.sum(w, dim=0) + self.epsilon)  # 将权重进行归一化
+        weight = w / (torch.sum(w, dim=0) + self.epsilon)  
         # Fast normalized fusion
         x = [weight[0] * x[0], weight[1] * x[1]]
         return torch.cat(x, self.d)
 
 
-# 三个分支concat操作
 class BiFPN_Concat3(nn.Module):
     def __init__(self, dimension=1):
         super(BiFPN_Concat3, self).__init__()
@@ -2108,16 +2062,11 @@ class BiFPN_Concat3(nn.Module):
 
     def forward(self, x):
         w = self.w
-        weight = w / (torch.sum(w, dim=0) + self.epsilon)  # 将权重进行归一化
+        weight = w / (torch.sum(w, dim=0) + self.epsilon)  
         # Fast normalized fusion
         x = [weight[0] * x[0], weight[1] * x[1], weight[2] * x[2]]
         return torch.cat(x, self.d)
 
-#BAM
-###################### BAM  attention  ####     START   by  AI&CV  ###############################
-###################### BAM  attention  ####     START   by  AI&CV  ###############################
-
-###################### BAM  attention  ####     START    ###############################
 
 import torch
 from torch import nn
@@ -2180,13 +2129,6 @@ class BAM(nn.Module):
         return x + x * attn
 
 
-###################### BAM  attention  ####     END   ###############################
-
-
-###################### BAM  attention  ####     END   by  AI&CV  ###############################
-
-
-###################### BAM  attention  ####     END   by  AI&CV  ###############################
 
 
 
@@ -2221,10 +2163,8 @@ class SimAM(torch.nn.Module):
 
         return x * self.activaton(y)
 
-# ShuffleAttention
 from torch.nn.parameter import Parameter
 
-# -----------------------------ShuffleAttention start ----------------------------------
 
 class ShuffleAttention(nn.Module):
 
@@ -2290,6 +2230,5 @@ class ShuffleAttention(nn.Module):
         # channel shuffle
         out = self.channel_shuffle(out, 2)
         return out
-# -----------------------------ShuffleAttention end ----------------------------------
 
 
