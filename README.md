@@ -6,7 +6,7 @@ This repo contains the official PyTorch implementation of DACA-Net.
 
 ## **Highlight**
 
-- Proposed a novel LCD defect detection network for better detection of tiny defects under low-contrast background.
+- Proposed a novel LCD defect detection network to improve the detection of tiny defects and low-contrast defects.
 - Refined CSPDarknet53 network to enhance detail awareness for tiny objects.
 - Developed a low-level semantic deep fusion module to improving the detection performance for tiny objects.
 - Proposed a dual-focus contrast enhancement attention module to improve low-contrast object detection.
@@ -20,7 +20,7 @@ Our codebase is based on [YOLOv5]([https://github.com/facebookresearch/detectron
 
 ### **LCD light defect dataset**
 
-The LCD light defect dataset displayed defects on a 7-inch screen with a resolution of 768×1280, encompassing spot, line, and mura defects. The dataset is provided by the data fusion research team at the University of Electronic Science and Technology of China. To download the dataset, please visit:
+The LCD light defect dataset displayed defects on a 7-inch screen with a resolution of 768×1280, encompassing spot, line, and mura defects. The dataset is provided by the data fusion research team at the University of Electronic Science and Technology of China. To download the dataset, please visit: https://pan.baidu.com/s/1R7OENxkxPrY5RVweAtToPg?pwd=1357
 
 Samples
 
@@ -28,7 +28,7 @@ Samples
 
 ### **LCD surface defect dataset**
 
-The surface defect dataset included three types of defects: oil, scratches and stains, with 400 images per defect type at a resolution of 1920×1080. The dataset is built and presented by Jian Zhang, Miaoju Ban (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit: https://robotics.pkusz.edu.cn/resources/dataset/. Additionally, the training data for DACA-Net can be downloaded at:
+The surface defect dataset included three types of defects: oil, scratches and stains, with 400 images per defect type at a resolution of 1920×1080. The dataset is built and presented by Jian Zhang, Miaoju Ban (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit: https://robotics.pkusz.edu.cn/resources/dataset/.
 
 Samples
 
@@ -44,14 +44,14 @@ Samples
 
 ### **PCB surface defect dataset**
 
-The PCB defect dataset contained 693 images with six types of defects: missing holes, open circuit, mouse bites, spur, short, and spurious copper. The dataset is built and presented by Lihui Dai et al. (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit: https://robotics.pkusz.edu.cn/resources/dataset/.
+The PCB defect dataset contained 693 images with six types of defects: missing holes, open circuit, mouse bites, spur, short, and spurious copper. The dataset is built and presented by Lihui Dai et al. (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit: https://robotics.pkusz.edu.cn/resources/dataset/. Additionally, the training data for DACA-Net can be downloaded at: https://pan.baidu.com/s/1G9cEm4SECPuIszecEt0uxA?pwd=1357.
 
 Samples
 
 ![绘图2](https://github.com/SijieLuo/Detail-aware-network-with-contrast-attention/assets/52660906/bfa1176f-084a-4302-aa58-ea99bde3b24d)
 
 ## **Result**
-## **Result on LCDLD dataset**
+### **Result on LCDLD dataset**
 
 | Models    | P (M) | P (L) | P (S) | R (M) | R (L) | R (S) | AP (M) | AP (L) | AP (S) | mAP  | Params | FLOPs |
 |-----------|-------|-------|-------|-------|-------|-------|--------|--------|--------|------|--------|-------|
@@ -64,8 +64,8 @@ Samples
 | YOLOv10s  | 98.8  | 86.0  | 87.9  | 97.2  | 87.4  | 94.9  | 99.1   | 92.5   | 94.3   | 93.4 | 8.0    | 24.5  |
 | Ours      | 100.0 | 93.0  | 96.2  | 100   | 93.2  | 96.7  | 99.5   | 94.8   | 95.7   | 96.7 | 7.4    | 20.3  |
 
-The model weight files can be downloaded at:
-## **Result on PKU-Market-Phone dataset**
+The model weight files can be downloaded at: https://pan.baidu.com/s/1ECJpvRn4xe-UCIrBAuGTCg?pwd=1357.
+### **Result on PKU-Market-Phone dataset**
 | Models       | P (O) | P (SC) | P (ST) | R (O) | R (SC) | R (ST) | AP (O) | AP (SC) | AP (ST) | mAP  |
 |--------------|-------|--------|--------|-------|--------|--------|--------|---------|---------|------|
 | YOLOv5s      | 98.3  | 96.4   | 97.0   | 98.8  | 95.8   | 97.2   | 98.6   | 96.5    | 96.2    | 97.2 |
@@ -77,8 +77,8 @@ The model weight files can be downloaded at:
 | YOLOv10s     | 93.9  | 96.4   | 85.6   | 96.4  | 94.4   | 85.6   | 96.9   | 94.6    | 94.6    | 96.5 |
 | Ours         | 99.4  | 95.0   | 97.8   | 98.8  | 95.8   | 98.3   | 99.3   | 97.6    | 98.4    | 98.5 |
 
-The model weight files can be downloaded at:
-## **Result on PKU-Market-PCB datasett**
+The model weight files can be downloaded at: https://pan.baidu.com/s/1dDz_-8PBU_B9IYvf89bs_g?pwd=1357.
+### **Result on PKU-Market-PCB datasett**
 
 | Metrics | YOLOv5s | YOLOXs | YOLOv6s | YOLOv7 | YOLOv8s | YOLOv9s | YOLOv10s | Ours |
 |---------|---------|--------|---------|--------|---------|---------|----------|------|
@@ -102,10 +102,12 @@ The model weight files can be downloaded at:
 | AP (Sc) | 97.1    | 93.1   | 93.1    | 97.8   | 98.5    | 96.6    | 96.6     | 96.7 |
 | mAP     | 95.2    | 94.4   | 94.4    | 95.4   | 96.5    | 95.4    | 94.4     | 97.1 |
 
-The model weight files can be downloaded at:
+The model weight files can be downloaded at: https://pan.baidu.com/s/1zj2D1yZ1SHY-j2yJOWyEZg?pwd=1357.
+
 ## **Acknowledge**
+The code base is built with ultralytics. Thanks for the great implementations!
 
-
+## **Citation**
 
 
 
