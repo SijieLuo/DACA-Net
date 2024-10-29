@@ -3,10 +3,12 @@
 ## **Introduction**
 This repo contains the official PyTorch implementation of DACA-Net.
 
-  <img src="https://github.com/user-attachments/assets/85ba4161-0059-4916-bf2a-231dd775bbec" width="30%" />
-  <img src="https://github.com/user-attachments/assets/85ba4161-0059-4916-bf2a-231dd775bbec" width="30%" />
-  <img src="https://github.com/user-attachments/assets/85ba4161-0059-4916-bf2a-231dd775bbec" width="30%" />
+  <img src="https://github.com/user-attachments/assets/85ba4161-0059-4916-bf2a-231dd775bbec" width="49%" />
+  <img src="https://github.com/user-attachments/assets/00c5904c-4c06-437b-857d-96628f3509d2" width="49%" />
 
+<p align="center">
+  <span>Result on LCD light defect dataset</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>Result on LCD surface defect dataset</span>
+</p>
 
 ## **Highlight**
 
@@ -60,14 +62,14 @@ Samples
 | Models    | P (M) | P (L) | P (S) | R (M) | R (L) | R (S) | AP (M) | AP (L) | AP (S) | mAP  | Params | FLOPs |
 |-----------|-------|-------|-------|-------|-------|-------|--------|--------|--------|------|--------|-------|
 | YOLOv5s   | 99.8  | 89.9  | 94.7  | 100   | 83.3  | 95.0  | 99.5   | 85.6   | 94.9   | 93.3 | 7.0    | 16.0  |
-| YOLOXs    | 99.4  | 86.4  | 99.7  | 100   | 82.2  | 86.3  | 99.5   | 94.4   | 90.2   | 91.4 | 10.6   | 23.6  |
-| YOLOv6s   | 99.5  | 66.9  | 94.0  | 100   | 79.3  | 95.9  | 99.5   | 86.4   | 91.9   | 92.0 | 16.3   | 44.2  |
-| YOLOv7    | 99.9  | 91.9  | 92.7  | 100   | 88.9  | 88.9  | 99.5   | 88.2   | 93.8   | 93.3 | 37.2   | 105.2 |
+| YOLOXs    | 99.4  | 86.8  | 89.7  | 100   | 82.2  | 86.3  | 99.5   | 94.4   | 90.2   | 91.4 | 10.6   | 23.6  |
+| YOLOv6s   | 99.5  | 66.2  | 94.4  | 100   | 87.8  | 79.3  | 99.5   | 86.4   | 91.9   | 92.6 | 16.3   | 44.2  |
+| YOLOv7    | 98.9  | 91.9  | 92.7  | 100   | 88.9  | 93.3  | 99.5   | 88.2   | 93.8   | 93.8 | 37.2   | 105.2 |
 | YOLOv8s   | 99.2  | 78.9  | 95.1  | 100   | 77.8  | 87.1  | 99.5   | 84.0   | 95.0   | 92.8 | 11.1   | 28.6  |
-| YOLOv9s   | 99.9  | 83.4  | 95.8  | 100   | 85.9  | 86.6  | 99.5   | 85.3   | 94.9   | 93.3 | 9.6    | 38.7  |
-| YOLOv10s  | 98.8  | 86.0  | 87.9  | 97.2  | 87.4  | 94.9  | 99.1   | 92.5   | 94.3   | 93.4 | 8.0    | 24.5  |
-| YOLOv11s  | 98.8  | 91.5  | 94.3  | 100   | 83.3  | 90.0  | 99.5   | 89.5   | 94.2   | 94.4 | 9.4    | 21.3  |
-| Ours      | 100.0 | 93.0  | 96.2  | 100   | 93.2  | 96.7  | 99.5   | 94.8   | 95.7   | 96.7 | 7.4    | 20.3  |
+| YOLOv9s   | 99.9  | 83.4  | 95.8  | 100   | 82.2  | 86.8  | 99.5   | 85.3   | 94.9   | 93.3 | 9.6    | 38.7  |
+| YOLOv10s  | 98.8  | 90.6  | 87.9  | 97.2  | 84.4  | 90.8  | 99.4   | 91.1   | 92.5   | 94.3 | 8.0    | 24.5  |
+| YOLOv11s  | 99.8  | 91.5  | 94.3  | 100   | 83.3  | 90.0  | 99.5   | 89.5   | 94.2   | 94.4 | 9.4    | 21.3  |
+| Ours      | 100.0 | 93.0  | 92.8  | 100   | 93.2  | 96.2  | 99.5   | 94.8   | 95.7   | 96.7 | 7.4    | 20.3  |
 
 The model weight files can be downloaded at: https://pan.baidu.com/s/1ECJpvRn4xe-UCIrBAuGTCg?pwd=1357.
 ### **Result on PKU-Market-Phone dataset**
