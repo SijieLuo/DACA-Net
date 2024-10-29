@@ -7,7 +7,7 @@ This repo contains the official PyTorch implementation of DACA-Net.
   <img src="https://github.com/user-attachments/assets/00c5904c-4c06-437b-857d-96628f3509d2" width="49%" />
 
 <p align="center">
-  <span>&emsp;&emsp;&emsp;&emsp;Result on LCD light defect dataset</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>Result on LCD surface defect dataset</span>
+  <span>&emsp;&emsp;&emsp;&emsp;Result on LCD light defect dataset</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>Result on LCD surface defect dataset</span>
 </p>
 
 ## **Highlight**
@@ -108,7 +108,7 @@ The model weight files can be downloaded at: https://pan.baidu.com/s/1dDz_-8PBU_
 | AP (Sh)  | 99.2    | 97.8   | 94.5    | 95.2   | 97.6    | 98.5    | 96.3     | 98.0     | 97.8 |
 | AP (Sp)  | 86.4    | 80.9   | 77.7    | 78.6   | 88.7    | 87.3    | 85.6     | 86.7     | 85.3 |
 | AP (Sc)  | 97.1    | 88.8   | 85.2    | 92.1   | 93.1    | 98.0    | 94.1     | 92.4     | 98.2 |
-|   mAP    | 95.2    | 90.6   | 88.3    | 90.5   | 94.4    | 95.4    | 94.0     | 94.7     | 97.1 |
+| mAP      | 95.2    | 90.6   | 88.3    | 90.5   | 94.4    | 95.4    | 94.0     | 94.7     | 97.1 |
 
 
 The model weight files can be downloaded at: https://pan.baidu.com/s/1zj2D1yZ1SHY-j2yJOWyEZg?pwd=1357.
