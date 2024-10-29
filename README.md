@@ -8,7 +8,7 @@ This repo contains the official PyTorch implementation of DACA-Net.
 
 
 <p align="center">
-  <span>&emsp;&emsp;Result on LCD light defect dataset</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>Result on LCD surface defect dataset</span>
+  <span>&emsp;&emsp;Result on LCD light defect dataset</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>Result on LCD surface defect dataset</span>
 </p>
 
 ## **Highlight**
