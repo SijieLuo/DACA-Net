@@ -27,7 +27,7 @@ Our codebase is based on [YOLOv5]([https://github.com/facebookresearch/detectron
 
 ### **LCD light defect dataset**
 
-The LCD light defect dataset displayed defects on a 7-inch screen with a resolution of 768×1280, encompassing spot, line, and mura defects. The dataset is provided by the data fusion research team at the University of Electronic Science and Technology of China. To download the dataset, please visit: https://pan.baidu.com/s/1R7OENxkxPrY5RVweAtToPg?pwd=1357
+The LCD light defect dataset consists of images displayed on a 7-inch screen with a resolution of 768×1280 pixels, covering spot, line, and mura defects. It includes 1,608 images in total. Due to the limited number of actual defects available during production, data augmentation was applied, resulting in 225 spot, 483 line, and 900 mura. The dataset is provided by the data fusion research team at the University of Electronic Science and Technology of China. To download the dataset, please visit: https://pan.baidu.com/s/1R7OENxkxPrY5RVweAtToPg?pwd=1357
 
 Samples
 
