@@ -51,7 +51,7 @@ Samples
 
 ### **PCB surface defect dataset**
 
-The PCB defect dataset contained 693 images with six types of defects: missing holes, open circuit, mouse bites, spur, short, and spurious copper. The dataset is built and presented by Lihui Dai et al. (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit: https://robotics.pkusz.edu.cn/resources/dataset/. Additionally, the training data for DACA-Net can be downloaded at: https://pan.baidu.com/s/1G9cEm4SECPuIszecEt0uxA?pwd=1357.
+The PCB defect dataset contained 693 images with six types of defects: missing holes, open circuit, mouse bites, spur, short, and spurious copper. The dataset is built and presented by Lihui Dai et al. (Open Lab on Human Robot Interaction, Peking University). To download the dataset, please visit: https://robotics.pkusz.edu.cn/resources/dataset/.
 
 Samples
 
@@ -118,7 +118,16 @@ The model weight files can be downloaded at: https://pan.baidu.com/s/1zj2D1yZ1SH
 The code base is built with ultralytics. Thanks for the great implementations!
 
 ## **Citation**
+Please cite the following paper if the code and dataset help your project:
 
-
-
+```bibtex
+@article{luo2024daca,
+  title={DACA-Net: Detail-aware network with contrast attention for locating liquid crystal display defects},
+  author={Luo, Sijie and Chen, Huaixin and Liu, Biyuan},
+  journal={Displays},
+  pages={102913},
+  year={2024},
+  publisher={Elsevier}
+}
+```
 
